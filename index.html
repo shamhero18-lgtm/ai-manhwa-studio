@@ -3,37 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Manhwa Studio</title>
+<title>THE LAST GANG LEADER | AI Manhwa Studio</title>
 <style>
-:root{--bg:#0b0b14;--card:#14141f;--text:#eceaf5;--muted:#9a98b0;--a:#8b5cf6;--b:#ec4899;--line:#26263a}
+:root{--bg:#0a0a0c;--card:#15151a;--text:#f1eeee;--muted:#a09a9a;--a:#dc2626;--b:#f59e0b;--line:#2a2a30}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1000px;margin:0 auto;padding:0 18px}
-nav{position:sticky;top:0;z-index:10;background:rgba(11,11,20,.9);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:10;background:rgba(10,10,12,.92);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
 .logo{font-weight:800}
-.logo span,.hero h1 span{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
 nav ul{display:flex;gap:16px;list-style:none;font-size:14px;color:var(--muted)}
-.hero{padding:72px 0 56px;text-align:center;background:radial-gradient(600px 300px at 50% 0,rgba(139,92,246,.25),transparent)}
-.hero h1{font-size:clamp(32px,8vw,56px);line-height:1.15;font-weight:800}
-.hero p{color:var(--muted);margin:16px auto 28px;max-width:520px}
+.hero{padding:80px 0 60px;text-align:center;background:radial-gradient(600px 320px at 50% 0,rgba(220,38,38,.28),transparent)}
+.kicker{letter-spacing:4px;font-size:12px;color:var(--muted);margin-bottom:12px}
+.hero h1{font-size:clamp(34px,9vw,64px);line-height:1.1;font-weight:900;text-transform:uppercase}
+.hero p{color:var(--muted);margin:18px auto 28px;max-width:520px}
 .btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:600;background:linear-gradient(90deg,var(--a),var(--b));color:#fff;border:0;font-size:15px}
 .btn.ghost{background:transparent;border:1px solid var(--line);margin-left:8px}
 section{padding:48px 0}
 h2{font-size:26px;margin-bottom:6px}
 .sub{color:var(--muted);margin-bottom:24px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.cover{aspect-ratio:3/4;display:flex;align-items:flex-end;padding:14px;font-weight:700;font-size:18px}
-.c1{background:linear-gradient(160deg,#4c1d95,#be185d)}
-.c2{background:linear-gradient(160deg,#0e7490,#1d4ed8)}
-.c3{background:linear-gradient(160deg,#b45309,#be123c)}
-.c4{background:linear-gradient(160deg,#047857,#0f766e)}
-.info{padding:12px 14px;font-size:14px;color:var(--muted)}
-.info b{color:var(--text);display:block}
-.tag{display:inline-block;margin-top:6px;font-size:12px;padding:2px 10px;border-radius:999px;border:1px solid var(--line)}
+.feature{display:grid;grid-template-columns:1fr;gap:20px;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.poster{min-height:320px;display:flex;align-items:flex-end;padding:20px;font-weight:900;font-size:28px;text-transform:uppercase;line-height:1.1;background:linear-gradient(160deg,#450a0a,#991b1b 60%,#f59e0b)}
+.fbody{padding:0 20px 22px}
+.tag{display:inline-block;margin:0 6px 8px 0;font-size:12px;padding:3px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.fbody p{color:var(--muted);margin:10px 0 16px}
+@media(min-width:700px){.feature{grid-template-columns:320px 1fr}.fbody{padding:24px 24px 24px 0}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.chap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.chap b{display:block}
+.chap span{color:var(--muted);font-size:13px}
 .steps{counter-reset:s}
 .step{display:flex;gap:14px;padding:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px}
 .step::before{counter-increment:s;content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:linear-gradient(135deg,var(--a),var(--b))}
@@ -47,26 +48,43 @@ footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:v
 </head>
 <body>
 <nav><div class="wrap">
-<a href="#top" class="logo">AI Manhwa <span>Studio</span></a>
-<ul><li><a href="#works">Works</a></li><li><a href="#how">Process</a></li><li><a href="#contact">Contact</a></li></ul>
+<a href="#top" class="logo">AI Manhwa <span class="grad">Studio</span></a>
+<ul><li><a href="#series">Series</a></li><li><a href="#chapters">Chapters</a></li><li><a href="#contact">Contact</a></li></ul>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
-<h1>Kahaniyan jo <span>AI</span> se<br>manhwa ban jaati hain</h1>
-<p>Story likho, AI se panels banao, aur apna webtoon duniya ko dikhao.</p>
-<a href="#works" class="btn">Works dekho</a>
-<a href="#contact" class="btn ghost">Judo</a>
+<div class="kicker">AI MANHWA STUDIO PRESENTS</div>
+<h1>The Last<br><span class="grad">Gang Leader</span></h1>
+<p>Ek gang ka aakhri sardar. Ek saamrajya jo bikhar raha hai. Aur ek faisla jo sab kuch badal dega.</p>
+<a href="#series" class="btn">Series dekho</a>
+<a href="#chapters" class="btn ghost">Chapters</a>
 </div></header>
 
-<section id="works"><div class="wrap">
+<section id="series"><div class="wrap">
 <h2>Featured Series</h2>
-<p class="sub">Ye sample cards hain.</p>
+<p class="sub">Hamari pehli manhwa.</p>
+<div class="feature">
+<div class="poster">The Last<br>Gang<br>Leader</div>
+<div class="fbody">
+<div style="height:20px"></div>
+<span class="tag">Action</span><span class="tag">Crime</span><span class="tag">Drama</span><span class="tag">Ongoing</span>
+<h2>THE LAST GANG LEADER</h2>
+<p>Yahan apni kahani ka short summary likho: hero kaun hai, gang ka maamla kya hai, aur kahani kis mod par hai.</p>
+<a href="#chapters" class="btn">Chapter 1 padho</a>
+</div>
+</div>
+</div></section>
+
+<section id="chapters"><div class="wrap">
+<h2>Chapters</h2>
+<p class="sub">Naye chapters jaldi aa rahe hain.</p>
 <div class="grid">
-<div class="card"><div class="cover c1">Shadow Heir</div><div class="info"><b>Action / Fantasy</b>Chapter 1 jaldi<span class="tag">Coming soon</span></div></div>
-<div class="card"><div class="cover c2">Neon Ronin</div><div class="info"><b>Sci-fi</b>Cyberpunk samurai<span class="tag">Draft</span></div></div>
-<div class="card"><div class="cover c3">Crimson Academy</div><div class="info"><b>Drama</b>School aur raaz<span class="tag">Draft</span></div></div>
-<div class="card"><div class="cover c4">Last Dungeon</div><div class="info"><b>Adventure</b>Aakhri dungeon<span class="tag">Idea</span></div></div>
-</div></div></section>
+<div class="chap"><b>Chapter 1</b><span>Coming soon</span></div>
+<div class="chap"><b>Chapter 2</b><span>Coming soon</span></div>
+<div class="chap"><b>Chapter 3</b><span>Coming soon</span></div>
+<div class="chap"><b>Chapter 4</b><span>Coming soon</span></div>
+</div>
+</div></section>
 
 <section id="how"><div class="wrap">
 <h2>Hum kaise banate hain</h2>
@@ -90,7 +108,7 @@ footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:v
 </form>
 </div></section>
 
-<footer><div class="wrap">&copy; <span id="y"></span> AI Manhwa Studio</div></footer>
+<footer><div class="wrap">&copy; <span id="y"></span> AI Manhwa Studio &middot; The Last Gang Leader</div></footer>
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
