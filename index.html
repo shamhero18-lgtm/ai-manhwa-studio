@@ -15,7 +15,7 @@ nav{position:sticky;top:0;z-index:10;background:rgba(10,10,12,.92);border-bottom
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
 .logo{font-weight:800}
 .grad{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
-nav ul{display:flex;gap:16px;list-style:none;font-size:14px;color:var(--muted)}
+nav ul{display:flex;gap:14px;list-style:none;font-size:14px;color:var(--muted)}
 .hero{padding:80px 0 60px;text-align:center;background:radial-gradient(600px 320px at 50% 0,rgba(220,38,38,.28),transparent)}
 .kicker{letter-spacing:4px;font-size:12px;color:var(--muted);margin-bottom:12px}
 .hero h1{font-size:clamp(34px,9vw,64px);line-height:1.1;font-weight:900;text-transform:uppercase}
@@ -27,14 +27,19 @@ h2{font-size:26px;margin-bottom:6px}
 .sub{color:var(--muted);margin-bottom:24px}
 .feature{display:grid;grid-template-columns:1fr;gap:20px;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .poster{min-height:320px;display:flex;align-items:flex-end;padding:20px;font-weight:900;font-size:28px;text-transform:uppercase;line-height:1.1;background:linear-gradient(160deg,#450a0a,#991b1b 60%,#f59e0b)}
-.fbody{padding:0 20px 22px}
+.fbody{padding:20px}
 .tag{display:inline-block;margin:0 6px 8px 0;font-size:12px;padding:3px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
-.fbody p{color:var(--muted);margin:10px 0 16px}
+.fbody p{color:var(--muted);margin:10px 0 14px}
+.fbody .main{color:var(--text);margin:0 0 16px}
 @media(min-width:700px){.feature{grid-template-columns:320px 1fr}.fbody{padding:24px 24px 24px 0}}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
 .chap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
 .chap b{display:block}
 .chap span{color:var(--muted);font-size:13px}
+.char{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.avatar{flex:none;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font-size:30px;font-weight:900;background:linear-gradient(135deg,var(--a),var(--b))}
+.char b{font-size:20px}
+.char p{color:var(--muted);font-size:14px;margin-top:4px}
 .steps{counter-reset:s}
 .step{display:flex;gap:14px;padding:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px}
 .step::before{counter-increment:s;content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:linear-gradient(135deg,var(--a),var(--b))}
@@ -49,7 +54,7 @@ footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:v
 <body>
 <nav><div class="wrap">
 <a href="#top" class="logo">AI Manhwa <span class="grad">Studio</span></a>
-<ul><li><a href="#series">Series</a></li><li><a href="#chapters">Chapters</a></li><li><a href="#contact">Contact</a></li></ul>
+<ul><li><a href="#series">Series</a></li><li><a href="#characters">Characters</a></li><li><a href="#chapters">Chapters</a></li><li><a href="#contact">Contact</a></li></ul>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
@@ -66,12 +71,21 @@ footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:v
 <div class="feature">
 <div class="poster">The Last<br>Gang<br>Leader</div>
 <div class="fbody">
-<div style="height:20px"></div>
 <span class="tag">Action</span><span class="tag">Crime</span><span class="tag">Drama</span><span class="tag">Ongoing</span>
 <h2>THE LAST GANG LEADER</h2>
-<p>Yahan apni kahani ka short summary likho: hero kaun hai, gang ka maamla kya hai, aur kahani kis mod par hai.</p>
+<p class="main"><b>Main Character:</b> Chain</p>
+<p>Shahar ke andhere me kabhi "Iron Crows" gang ka raaj tha. Ab sirf ek insaan bacha hai: Chain, gang ka aakhri leader. Dushman gangs ilaake chheen rahi hain, apne hi log gaddari kar rahe hain, aur Chain ke saamne ek hi sawal hai: gang ko khatam hone de, ya aisa faisla le jo use hero bana de ya villain.</p>
 <a href="#chapters" class="btn">Chapter 1 padho</a>
 </div>
+</div>
+</div></section>
+
+<section id="characters"><div class="wrap">
+<h2>Characters</h2>
+<p class="sub">Kahani ke chehre.</p>
+<div class="char">
+<div class="avatar">C</div>
+<div><b>Chain</b><p>Iron Crows gang ka aakhri leader. Shaant, khatarnaak, aur apne logon ke liye kuch bhi kar gujarne wala.</p></div>
 </div>
 </div></section>
 
